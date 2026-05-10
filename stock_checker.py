@@ -69,7 +69,8 @@ def check_once(send: bool = True):
             msg = build_message(row, short_score, short_items, long_score, long_items, df)
             messages.append(msg)
 
-            should_notify = short_score >= 8 or long_score >= 8
+            #should_notify = short_score >= 8 or long_score >= 8
+            should_notify = true
 
             if send and should_notify and users:
                 for user_id in users:
